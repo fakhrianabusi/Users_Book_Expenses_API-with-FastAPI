@@ -38,7 +38,7 @@ def get_all_books():
     return books
 
 
-@router.get("/{book_id}", response_model=BookPublic)
+@router.get("/books/{book_id}", response_model=BookPublic)
 def get_book_by_id(
     book_id: int = Path(..., gt=0, description="Enter The ID of the book"),
 ):
